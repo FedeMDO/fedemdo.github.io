@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fede montes de oca | software developer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="bg"></canvas>   
+
+    <main>
+      <header class="reveal">
+        <h1>⚡fede montes de oca⚡</h1>
+        <h2>software developer</h2>
+        <div class="media">
+          <a href="https://github.com/FedeMDO" target="_blank"><img src="assets/github.svg" alt="github"></a>
+          <a href="https://www.linkedin.com/in/federico-montes-de-oca/?locale=en_US" target="_blank"><img src="assets/linkedin.svg" alt="linkedin"></a>
+          <a href="https://twitter.com/FedeMDO_" target="_blank"><img src="assets/twitter.svg" alt="twitter"></a>
+        </div>
+      </header>
+
+      <blockquote class="reveal">
+        <p>I like getting stuff done and putting it online</p>
+      </blockquote>
+
+      <section class="reveal">
+        <h2>👩🏽‍🚀 about me 👩🏽‍🚀</h2>
+        <p>
+          I'm a dev. I like analysing problems and designing solutions to solve them. If you ask me, I prefer the backend side, although I can get some frontend stuff done.
+          I try to have my code clean, beautiful, consistent and performant. Every time I learn something that would improve my code, I usually do a Pull Request with "Refactor" as the name prefix.
+        </p>
+
+        <button id="bio-toggle-deeper-stuff">reveal deeper stuff</button>
+        <div id="bio-deeper-stuff" class="bio-deeper-stuff">
+          <p>
+            I faced a tech career because when I was a child I was afraid from computers. 
+            I literally used to cry when I pressed the "minimize" button in Paint (on an old Windows 95 OS) because the windows dissapeared.
+          </p>
+  
+          <p>
+            I'm in my earlies 20s struggling to finally have my CS degree. I come from an argentinian medium-low class family (from Buenos Aires, Argentina). 
+            Claudio, my father, is a truck mechanic. 
+            His hands turned dark because of the oil and his back hurts. Cristina, my mother, takes care of the house but she also works in a government office. 
+            I still remember when she didn't eat on certain nights so that me and my brothers can. I used to have a sister but meningitis take her away from me on March 2003.
+          </p>
+  
+          <p>
+            I played football for like 12 years when I was a child. Fortunately, before finishing high-school I realised I wasn't good enough to reach professionality and make a living from it.
+            I had my first girlfiend when I was 15 but it didn't lasted too much. Then I met other girl. we're still together after 6 years. 
+            I've tried to turn her into the dev world but she prefers medicine.
+          </p>
+  
+          <p>
+            Thanks to a student exchange program between Argentina and France, and without knowing how it feels to be on a plane, I went to Paris to study on <a href="https://www.ensea.fr/fr">an engineering school</a> for 1 year. 
+            So I learned french! There, I only had brazilians friends. So I learned (a bit of) portuguese! And I can comunicate with some humble fluency in english.
+          </p>
+        </div>
+
+        <p>
+          I also do research and I have several papers published on national journals. High Performance Computing and Simulation stuff.
+        </p>
+
+        <p>Having lived some years in this dev world, I love it because it continues being a craft. 
+          And, as in all crafts, you can leave your special touch. It's not far from art, isn't it?
+        </p>
+      </section>
+
+      
+
+      <blockquote class="reveal">
+        <p>Life is either a daring adventure or nothing at all</p>
+      </blockquote>
+
+      <section class="left reveal">
+        <h2>💻 Work History</h2>
+        <h3><a href="https://www.scorf.io/">Scorf.io</a></h3>
+        <h5>Feb 2020 - Present</h5>
+        <p>BI Product design and development from scratch.</p>
+        <p>          
+          End to end development of Business Intelligence SaaS Platform specialized in Financial data.
+          App core in JavaScript (NodeJS + NestJS + React + Azure)
+        </p>
+        <p>
+          Architecture decisions, backend and frontend development, testing, DevOps, UI, UX.
+          Always following the best practices, in an agile environment.
+          
+          Some others techs: MongoDB, Docker, Cypress, Jest, Excel (xlsx generation).
+        </p>
+        <p>First 6 months working as intern in Paris. Then, remotely working from Argentina !</p>
+        <p>
+          About the company:
+          Product based IT and BI start-up based in
+          Paris, France.
+        </p>
+        <h3><a href="https://www.suzano.com.br/">Stenfar SAIC (Suzano Group)</a></h3>
+        <h5>Jun 2018 - Sep 2019 (1 yr 4 mos)</h5>
+        <p>
+          Development of internal tools, web services and solutions on the stacks .NET and MEHN (nodeJS). These solutions impact on the ERP and on the company's eCommerce.
+          Progressive migration of the Intranet to newer and adaptable Front-end technologies (Bootstrap, jQuery. Yeah, old as well but it was my first job and I did not know so much React).
+          Survey of requirements and processes, use cases, monitoring and testing of the process of development and maintenance of the ERP Corporate Calipso.
+          Functional maintenance of the Intranet with .NET technologies. Development and maintenance SQL: Modeling, Queries, Stored Procedures, Jobs, etc.
+          <ul>
+            <li>Integration with MercadoLibre and TiendaNube APIs for automatic entry of orders to the system and stock control.</li>
+            <li>Web Services SOAP and REST to expose the calculation of taxes in e-commerce.</li>
+            <li>Purchase and invoice authorization process module</li>
+            <li>Agenda module for sales executives </li>
+          </ul> 
+        </p>
+
+      </section>
+
+      <blockquote class="reveal">
+        <p>That's all, thanks!</p>
+      </blockquote>
+
+    </main>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="module">
+
+      import * as THREE from 'https://cdn.skypack.dev/three';     
+      // Setup
+
+      const scene = new THREE.Scene();
+
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+      const renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector('#bg'),
+      });
+
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.position.setZ(30);
+      camera.position.setX(-3);
+
+      renderer.render(scene, camera);
+
+      // Lights
+
+      const pointLight = new THREE.PointLight(0xffffff);
+      pointLight.position.set(-5, -5, 25);
+
+      const ambientLight = new THREE.AmbientLight(0xffffff);
+      scene.add(pointLight, ambientLight);
+
+      function addStar() {
+        const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+        const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+        const star = new THREE.Mesh(geometry, material);
+
+        const [x, y, z] = [THREE.MathUtils.randFloatSpread(100),THREE.MathUtils.randFloatSpread(100),THREE.MathUtils.randFloatSpread(100)];
+
+        star.position.set(x, y, z);
+        scene.add(star);
+      }
+
+      for (let i = 0; i < 200; i++) {
+        addStar();
+      }
+
+      // Background
+
+      const spaceTexture = new THREE.TextureLoader().load('../assets/space.jpg');
+      scene.background = spaceTexture;
+
+      // Avatar
+
+      const fedeTexture = new THREE.TextureLoader().load('../assets/yo-porto.jpeg');
+
+      const fede = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: fedeTexture }));
+
+      scene.add(fede);
+
+      // Moon
+
+      const moonTexture = new THREE.TextureLoader().load('../assets/moon.jpg');
+      const normalTexture = new THREE.TextureLoader().load('../assets/normal.jpg');
+
+      const moon = new THREE.Mesh(
+        new THREE.SphereGeometry(3, 32, 32),
+        new THREE.MeshStandardMaterial({
+          map: moonTexture,
+          normalMap: normalTexture,
+        })
+      );
+
+      scene.add(moon);
+
+      moon.position.x= -10;
+      moon.position.z = 30;
+
+      fede.position.x = 2;
+      fede.position.z = -5;
+
+      // Scroll Animation
+
+      function moveCamera() {
+        const t = document.body.getBoundingClientRect().top;
+        moon.rotation.x += 0.05;
+        moon.rotation.y += 0.075;
+        moon.rotation.z += 0.05;
+
+        fede.rotation.y += 0.01;
+        fede.rotation.z += 0.01;
+
+        camera.position.z = t * -0.01;
+        camera.position.x = t * -0.0002;
+        camera.rotation.y = t * -0.0002;
+      }
+
+      document.body.onscroll = moveCamera;
+      moveCamera();
+
+      // Animation Loop
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        moon.rotation.x += 0.005;
+
+        // controls.update();
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+      let bioRevealDprStuff = document.querySelector('#bio-toggle-deeper-stuff');
+      bioRevealDprStuff.onclick = function (){
+        document.querySelector("#bio-deeper-stuff").classList.toggle("active");
+      }
+      ScrollReveal().reveal('.reveal', { delay: 150, duration: 1200, distance: '60px' });
+    </script>
+  </body>
+</html>
