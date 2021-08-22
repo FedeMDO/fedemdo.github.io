@@ -12,8 +12,8 @@
 
     <main>
       <header class="reveal">
-        <h1>⚡fede montes de oca⚡</h1>
-        <h2>software developer</h2>
+        <h1 style="text-align: center;">⚡fede montes de oca⚡</h1>
+        <h2 style="text-align: center;">software developer</h2>
         <div class="media">
           <a href="https://github.com/FedeMDO" target="_blank"><img src="assets/github.svg" alt="github"></a>
           <a href="https://www.linkedin.com/in/federico-montes-de-oca/?locale=en_US" target="_blank"><img src="assets/linkedin.svg" alt="linkedin"></a>
@@ -147,7 +147,7 @@
 
       function addStar() {
         const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-        const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+        const material = new THREE.MeshStandardMaterial({ color: Math.floor(Math.random()*16777215) });
         const star = new THREE.Mesh(geometry, material);
 
         const [x, y, z] = [THREE.MathUtils.randFloatSpread(100),THREE.MathUtils.randFloatSpread(100),THREE.MathUtils.randFloatSpread(100)];
@@ -156,14 +156,14 @@
         scene.add(star);
       }
 
-      for (let i = 0; i < 200; i++) {
+      for (let i = 0; i < 500; i++) {
         addStar();
       }
 
       // Background
 
-      const spaceTexture = new THREE.TextureLoader().load('../assets/space.jpg');
-      scene.background = spaceTexture;
+      // const spaceTexture = new THREE.TextureLoader().load('../assets/space.jpg');
+      // scene.background = spaceTexture;
 
       // Avatar
 
@@ -220,7 +220,6 @@
 
         moon.rotation.x += 0.005;
 
-        // controls.update();
 
         renderer.render(scene, camera);
       }
